@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const chatslice=createSlice({
+const chatSlice=createSlice({
     name:"chat",
     initialState:{
         messages:[]
@@ -11,5 +11,5 @@ state.messages.push(action.payload)
         }
     }
 })
-export  const {addMessage}=chatslice.actions;
-export default chatslice.reducer;
+export  const {addMessage}=chatSlice.actions;
+export default chatSlice.reducer;

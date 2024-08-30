@@ -3,12 +3,12 @@ import appSlice from "./appSlice";
 // import searchSlice from "./searchSlice";
 import chatSlice from "./chatSlice";
 
-const Store=configureStore({
-reducer:{
-    app:appSlice,
-chat:chatSlice
-    // seach:searchSlice,
+const Store = configureStore({
+    reducer: {
+        app: appSlice,
+        chat: chatSlice,
+        // seach:searchSlice,
 
-}
+    }
 })
 export default Store;
