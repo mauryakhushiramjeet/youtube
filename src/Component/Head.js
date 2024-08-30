@@ -7,7 +7,7 @@ const Head = () => {
     const [searchQuery, setSearchQuery] = useState("")
     const [suggetions, setSuggetions] = useState([]);
     const [showSuggetions, setShowsuggetions] = useState(false)
-    const searchCache = useSelector((store) => store.search)
+    // const searchCache = useSelector((store) => store.search)
     const dispatchs = useDispatch()
     useEffect(() => {
         // console.log(searchQuery)
@@ -15,11 +15,11 @@ const Head = () => {
         // if the diff btw  two 2 api ki<200ms decline api call
 
         const timer = setTimeout(() => {
-            if (searchCache[searchQuery]) {
-                setSuggetions(searchCache[searchQuery])
-            } else {
+            // if (searchCache[searchQuery]) {
+                // setSuggetions(searchCache[searchQuery])
+            // } else {
                 getSearchSuggetion()
-            }
+            // }
         }, 200)
 
         return () => {
@@ -32,9 +32,9 @@ const Head = () => {
         console.log(json[1])
 
         setSuggetions(json[1])
-        dispatchs(cacheResult({
-            [searchQuery]: json[1],
-        }))
+        // dispatchs(cacheResult({
+        //     [searchQuery]: json[1],
+        // }))
     }
     const dispatch = useDispatch()
     const toggeleMenuHandeler = () => {
