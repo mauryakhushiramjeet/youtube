@@ -6,12 +6,15 @@ const VideoCard = ({info}) => {
     const{title,thumbnails,channelTitle}=snippet;
 
   return (
-    <div className='p-2 m-2 w-72 shadow-lg'>
+    <div className='p-2 m-2 w-72 shadow-lg '>
       <img className='rounded-lg' alt='thumbnails' src={thumbnails.medium.url}/>
       <ul>
         <li className='font-bold py-2'>{title}</li>
         <li>{channelTitle}</li>
-        <li>{statistics.viewCount}views</li>
+        <li>{statistics.viewCount/1000000>=1
+         ?`${(statistics.viewCount/1000000).toPrecision(2)}M views`
+         :  `${(statistics.viewCount/1000).toFixed(2)}K views`
+         }  </li>
       </ul>
     </div>
 

@@ -17,7 +17,7 @@ if(videos.length===0){
   return <h1>loading</h1>
 }
   return (
-  <div className='p-2 m-2 flex flex-wrap'>
+  <div className='p-2 m-2 flex flex-wrap  '>
    {videos.map((video)=>(
    <Link  key={video.id} to={"/watch?v=" + video.id}><VideoCard  info={video}/></Link> ))}
   </div>

@@ -29,7 +29,7 @@ const Head = () => {
     const getSearchSuggetion = async () => {
         const data = await fetch(YOU_TUBE_API + searchQuery)
         const json = await data.json()
-        console.log(json[1])
+        // console.log(json[1])
 
         setSuggetions(json[1])
         // dispatchs(cacheResult({
