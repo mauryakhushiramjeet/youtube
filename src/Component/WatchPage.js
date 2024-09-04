@@ -37,10 +37,10 @@ const WatchPage = () => {
             <div className='px-5 flex '>
                 <div>
                     <iframe
-                        width="1000" height="500"
+                        width="102%" height="500" 
                         src={"https://www.youtube.com/embed/" + searchParams.get("v")}
                         title="YouTube video player"
-                        frameBorder="0"
+                        FrameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen aria-hidden="false">
@@ -56,22 +56,22 @@ const WatchPage = () => {
                         </div>
                         <button className='bg-black text-white mr-7 px-5 py-1 rounded-2xl h-10 flex '><FontAwesomeIcon className='h-6 pr-1' icon={faBell} />Subscribe</button>
 
-                        <button className='bg-black text-white ml-40  px-3 py-1 rounded-2xl flex text-[15px]  h-10'><FontAwesomeIcon className='h-5 px-2' icon={faThumbsUp} />{statistics.likeCount / 1000000 >= 1
+                        <button className='bg-black text-white ml-[500px]  px-3 py-1 rounded-2xl flex text-[15px]  h-10'><FontAwesomeIcon className='h-5 px-2' icon={faThumbsUp} />{statistics.likeCount / 1000000 >= 1
                             ? `${(statistics.likeCount / 1000000).toPrecision(2)}M `
                             : `${(statistics.likeCount / 1000).toFixed(2)}K `
                         }<FontAwesomeIcon className='h-6 px-2' icon={faThumbsDown} /></button>
-                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl  h-10 flex justify-center items-center'>
+                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl ml-10  h-10 flex justify-center items-center'>
                             <FontAwesomeIcon className='h-5 px-2 ' icon={faShare} />   Share</button>
-                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl  h-10 flex justify-center items-center'><FontAwesomeIcon className='h-4 px-2 font-bold' icon={faArrowDown} />Dowload</button>
-                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl font-bold  h-10 justify-center items-center'>...</button>
+                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl  ml-10 h-10 flex justify-center items-center'><FontAwesomeIcon className='h-4 px-2 font-bold' icon={faArrowDown} />Dowload</button>
+                        <button className='bg-black text-white mx-3 px-3 py-1 rounded-2xl font-bold  h-10 justify-center items-center ml-10'>...</button>
                     </div>
                     <div>
                         <h1 className='mt-2 font-bold text-xl'> {statistics.commentCount}</h1>
                     </div>
                 </div>
-                <div className='w-full'>
+                {/* <div className='w-full'>
                     <LiveChat />
-                </div>
+                </div> */}
             </div>
             <div className='w-full'>
                 <CommentList />

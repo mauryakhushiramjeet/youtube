@@ -18,8 +18,11 @@ const CommentList = () => {
     };
     if (comments.length === 0) return <h1>Loading...</h1>;
     return (
-        <div className='overflow-y-scroll h-[100%]'>
+        
+        <div className='overflow-y-scroll h-[100%] '>
             <h1 className='font-bold px-2 my-2 text-xl'>Comments:</h1>
+            {/* <input className='border border-gray-400 w-[80%] p-2 mt-2 ml-2 mr-2' type='text'/><button className='ml-2 rounded-lg bg-green-100 p-3 text-lg font-semibold'>send</button> */}
+
             {comments.map((comment) => (
                 <div key={comment.id} className='w-full rounded-lg my-1 items-center pl-3 flex bg-slate-200 p-2 '>
                     <img className='h-12 rounded-3xl ' src={comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl} />
