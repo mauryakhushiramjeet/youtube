@@ -27,7 +27,7 @@ const CommentList = () => {
                 <div key={comment.id} className='w-full rounded-lg my-1 items-center pl-3 flex bg-slate-200 p-2 '>
                     <img className='h-12 rounded-3xl ' src={comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl} />
                     <span className='pl-3 font-bold font-serif  '>{comment?.snippet?.topLevelComment?.snippet?.authorDisplayName}</span>
-                    <span className="px-2 overflow-hidden ">
+                    <span className="px-2 overflow-hidden whitespace-nowrap  text-ellipsis  ">
                         {comment?.snippet?.topLevelComment?.snippet?.textOriginal}
                     </span>
                 </div>

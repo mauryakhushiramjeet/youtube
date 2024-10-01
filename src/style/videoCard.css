@@ -1,0 +1,8 @@
+.videoCard{
+    width: 320px;
+}
+@media (max-width:380px) {
+    .videoCard{
+        width: 280px;
+    }
+}

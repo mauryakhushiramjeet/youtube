@@ -8,6 +8,7 @@ const NewSearchSlice=createSlice({
     reducers:{
         NewSearch:(state,action)=>{
             state.allVideos = action.payload;
+            // console.log(state.allVideos)
         }
     }
 })
